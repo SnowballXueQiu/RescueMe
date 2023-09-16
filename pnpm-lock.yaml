@@ -18,6 +18,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.15
     version: 10.4.15(postcss@8.4.29)
+  glob:
+    specifier: ^10.3.4
+    version: 10.3.4
   nuxt:
     specifier: ^3.7.3
     version: 3.7.3

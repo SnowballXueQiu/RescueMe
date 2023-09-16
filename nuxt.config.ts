@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -6,13 +5,19 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
   css: ['@/assets/css/main.css'],
-  webpack: {
-    extractCSS: true,
-    postcss: {
-      execute: true
-    }
-  },
   nitro: {
     preset: 'vercel'
+  },
+  vite: {
+    build: {
+      cssCodeSplit: true,
+      cssMinify: true,
+      chunkSizeWarningLimit: 2000,
+      minify: true,
+    },
+  },
+  experimental: {
+    externalVue: true,
+    payloadExtraction: true
   }
 })

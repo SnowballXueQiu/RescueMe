@@ -1,8 +1,8 @@
 <template>
-    <div class="py-10">
+    <div class="py-10 px-7">
         <content-doc v-slot="{doc}">
             <transition-group name="slide" @enter="onEnter">
-                <div class="prose mb-2 dark:prose-invert dark:prose-headings:text-gray-300" data-delay="1" v-if="finish">
+                <div class="prose mb-4 dark:prose-invert dark:prose-headings:text-gray-300" data-delay="1" v-if="finish">
                     <h1>{{ doc.title }}</h1>
                 </div>
                 <content-renderer :value="doc" class="
@@ -13,14 +13,11 @@
                         dark:prose-img:border-gray-700
                         prose-img:rounded-md max-w-full mx-auto
                     " key="renderer" v-if="finish" data-delay="2" />
-                <div class="text-right opacity-50 text-gray-600 font-sans dark:text-gray-300" key="author" v-if="finish">
-                    Authors <br />
-                    <a v-for="([author,email], idx) in doc.authors" :href="`mailto:${email}`">
+                <footer class="w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-300" key="footer" v-if="finish">
+                    <a v-for="([author,email], idx) in doc.authors" :href="`mailto:${email}`" class="underline-offset-4 hover:underline">
                         {{ author }} {{ idx === doc.authors.length-1 ? '' : ', ' }}
                     </a>
-                </div>
-                <footer class="w-full mt-2 text-right opacity-50 text-gray-600 font-sans dark:text-gray-300" key="footer" v-if="finish">
-                    <div v-if="doc.copyright">
+                    <div v-if="doc.copyright" class="mt-1 w-fit mr-0 ml-auto">
                         <span class="underline-offset-4 hover:underline">
                             &copy; <a :href="doc.copyright.url">{{ doc.copyright.name }}</a>
                         </span>
