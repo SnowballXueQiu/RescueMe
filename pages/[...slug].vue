@@ -3,9 +3,15 @@
     <div class="py-10 px-7">
         <content-doc v-slot="{doc}">
             <transition-group name="slide" @enter="onEnter">
+                <div v-if="finish" class="text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300">
+                    <img src="../public/logo.svg" alt="Rescue Me"
+                         class="mx-auto" style="max-width: 90%">
+                    <br />
+                    <hr class="mx-auto" style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
+                </div>
                 <div v-if="finish" class="prose mb-4 dark:prose-invert dark:prose-headings:text-gray-300"
                      data-delay="1">
-                    <h1>{{ doc.title }}</h1>
+                    <h1>{{ doc['title'] }}</h1>
                 </div>
                 <content-renderer v-if="finish" key="renderer" :value="doc" class="
                         dark:prose-invert
