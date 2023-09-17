@@ -1,4 +1,4 @@
-import {globSync, Glob} from 'glob';
+import {globSync} from 'glob';
 function isIndex(path: string){
     return /index/.test(path);
 }

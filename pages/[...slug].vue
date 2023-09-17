@@ -20,8 +20,8 @@
                 <footer v-if="finish"
                         key="footer"
                         class="w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-300">
-                    <a v-for="([author,email], idx) in doc['authors']" :href="`mailto:${email}`"
-                       class="underline-offset-4 hover:underline">
+                    <a v-for="([author], idx) in doc['authors']"
+                       class="underline-offset-4">
                         {{ author }} {{ idx === doc['authors'].length - 1 ? '' : ', ' }}
                     </a>
                     <br/>
@@ -35,28 +35,60 @@
                         <hr class="text-center mx-auto"
                             style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
                         <br/>
-                        <div class="text-left">
-                            前端:
-                            <a class="underline-offset-4 hover:underline" href="https://github.com/GaoNeng-wWw"
-                               rel="noopener noreferrer"
-                               target="_blank">GaoNeng-wWw</a> | <a
-                            class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu"
-                            rel="noopener noreferrer"
-                            target="_blank">Snowball_233</a> <br/>
-                            <span>撰稿: 旧棠</span> <br/>
-                            友情链接:
-                            <a class="underline-offset-4 hover:underline" href="https://github.com/xSilver-Yang"
-                               rel="noopener noreferrer"
-                               target="_blank">xSilver-Yang</a> <br />
-                            GitHub:
-                            <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu/RescueMe"
-                               rel="noopener noreferrer"
-                               target="_blank">RescueMe</a> <br />
+                        <div class="text-center mx-auto"
+                             style="width: 90%; height: auto;
+                                    border-radius: 30px; background: rgba(3, 7, 18, 0.8);
+                                    box-shadow: 5px 5px 15px #1e293b,
+                                    -5px -5px 15px #475569;
+                                    display:block; vertical-align:middle">
+                            <div style="display: grid;
+                                        grid-template-columns: 1fr auto 1fr;
+                                        grid-template-rows: repeat(5, auto);
+                                        grid-column-gap: 10px;
+                                        grid-row-gap: 0;">
+                                <div class="text-right" style="margin-top: 10px">
+                                    <div style="grid-area: 1 / 1 / 3 / 2;">
+                                        <b>前端</b> <br /> <br />
+                                    </div>
+                                    <div style="grid-area: 3 / 1 / 4 / 2;">
+                                        <b>撰稿</b> <br />
+                                    </div>
+                                    <div style="grid-area: 4 / 1 / 5 / 2;">
+                                        <b>友情链接</b>
+                                    </div>
+                                </div>
+                                <div style="grid-area: 1 / 2 / 5 / 3;
+                                            width: 1px; height: 100%;
+                                            border: 1px solid #1f2937;
+                                            border-radius: 5px;
+                                            margin-top: 10px">
+                                </div>
+                                <div class="text-left" style="margin-top: 10px">
+                                    <div style="grid-area: 1 / 3 / 3 / 4;">
+                                        <a class="underline-offset-4 hover:underline" href="https://github.com/GaoNeng-wWw"
+                                           rel="noopener noreferrer"
+                                           target="_blank">GaoNeng-wWw</a> <br />
+                                        <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu"
+                                           rel="noopener noreferrer"
+                                           target="_blank">Snowball_233</a>
+                                    </div>
+                                    <div style="grid-area: 3 / 3 / 4 / 4;">旧棠</div>
+                                    <div style="grid-area: 4 / 3 / 5 / 4;">
+                                        <a class="underline-offset-4 hover:underline" href="https://github.com/xSilver-Yang"
+                                           rel="noopener noreferrer"
+                                           target="_blank">xSilver-Yang</a>
+                                    </div>
+                                </div>
+                                <div style="grid-area: 5 / 1 / 6 / 4;
+                                            margin-top: 10px;
+                                            margin-bottom: 10px;">
+                                    GitHub:
+                                    <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu/RescueMe"
+                                       rel="noopener noreferrer"
+                                       target="_blank">RescueMe</a> <br />
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- 当前commit名 -->
-                        <!--                        <span class="mx-2">|</span>-->
-                        <!--                        <span>当前commit名: {{ currentCommitName }}</span>-->
                     </div>
                 </footer>
             </transition-group>
