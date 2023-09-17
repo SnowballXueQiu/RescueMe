@@ -9,10 +9,6 @@
                     <br />
                     <hr class="mx-auto" style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
                 </div>
-                <div v-if="finish" class="prose mb-4 dark:prose-invert dark:prose-headings:text-gray-300"
-                     data-delay="1">
-                    <h1>{{ doc['title'] }}</h1>
-                </div>
                 <content-renderer v-if="finish" key="renderer" :value="doc" class="
                         dark:prose-invert
                         prose-p:text-gray-700 dark:prose-p:text-gray-300
