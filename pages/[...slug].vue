@@ -43,43 +43,35 @@
                                     display:block; vertical-align:middle">
                             <div style="display: grid;
                                         grid-template-columns: 1fr auto 1fr;
-                                        grid-template-rows: repeat(5, auto);
+                                        grid-template-rows: 1fr auto;
                                         grid-column-gap: 10px;
                                         grid-row-gap: 0;">
-                                <div class="text-right" style="margin-top: 10px">
-                                    <div style="grid-area: 1 / 1 / 3 / 2;">
-                                        <b>前端</b> <br /> <br />
-                                    </div>
-                                    <div style="grid-area: 3 / 1 / 4 / 2;">
-                                        <b>撰稿</b> <br />
-                                    </div>
-                                    <div style="grid-area: 4 / 1 / 5 / 2;">
-                                        <b>友情链接</b>
-                                    </div>
+                                <div class="text-right" style="grid-area: 1 / 1 / 2 / 2;
+                                                               margin-top: 10px">
+                                    <b>前端</b> <br /> <br />
+                                    <b>撰稿</b> <br />
+                                    <b>友情链接</b>
                                 </div>
-                                <div style="grid-area: 1 / 2 / 5 / 3;
+                                <div style="grid-area: 1 / 2 / 2 / 3;
                                             width: 1px; height: 100%;
                                             border: 1px solid #1f2937;
                                             border-radius: 5px;
                                             margin-top: 10px">
                                 </div>
-                                <div class="text-left" style="margin-top: 10px">
-                                    <div style="grid-area: 1 / 3 / 3 / 4;">
-                                        <a class="underline-offset-4 hover:underline" href="https://github.com/GaoNeng-wWw"
-                                           rel="noopener noreferrer"
-                                           target="_blank">GaoNeng-wWw</a> <br />
-                                        <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu"
-                                           rel="noopener noreferrer"
-                                           target="_blank">Snowball_233</a>
-                                    </div>
-                                    <div style="grid-area: 3 / 3 / 4 / 4;">旧棠</div>
-                                    <div style="grid-area: 4 / 3 / 5 / 4;">
-                                        <a class="underline-offset-4 hover:underline" href="https://github.com/xSilver-Yang"
-                                           rel="noopener noreferrer"
-                                           target="_blank">xSilver-Yang</a>
-                                    </div>
+                                <div class="text-left" style="grid-area: 1 / 3 / 2 / 4;
+                                                              margin-top: 10px">
+                                    <a class="underline-offset-4 hover:underline" href="https://github.com/GaoNeng-wWw"
+                                       rel="noopener noreferrer"
+                                       target="_blank">GaoNeng-wWw</a> <br />
+                                    <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu"
+                                       rel="noopener noreferrer"
+                                       target="_blank">Snowball_233</a> <br />
+                                    <span>旧棠</span> <br />
+                                    <a class="underline-offset-4 hover:underline" href="https://github.com/xSilver-Yang"
+                                       rel="noopener noreferrer"
+                                       target="_blank">xSilver-Yang</a>
                                 </div>
-                                <div style="grid-area: 5 / 1 / 6 / 4;
+                                <div style="grid-area: 2 / 1 / 3 / 4;
                                             margin-top: 10px;
                                             margin-bottom: 10px;">
                                     GitHub:
