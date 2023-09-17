@@ -4,9 +4,9 @@
         <content-doc v-slot="{doc}">
             <transition-group name="slide" @enter="onEnter">
                 <div v-if="finish" class="text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300">
-                    <img src="../public/logo.svg" alt="Rescue Me"
-                         class="mx-auto" style="max-width: 90%">
-                    <br />
+                    <img alt="Rescue Me" class="mx-auto"
+                         src="../public/logo.svg" style="max-width: 90%">
+                    <br/>
                     <hr class="mx-auto" style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
                 </div>
                 <content-renderer v-if="finish" key="renderer" :value="doc" class="
@@ -24,10 +24,39 @@
                        class="underline-offset-4 hover:underline">
                         {{ author }} {{ idx === doc['authors'].length - 1 ? '' : ', ' }}
                     </a>
+                    <br/>
                     <div v-if="doc['copyright']" class="mt-1 w-fit mr-0 ml-auto">
                         <span class="underline-offset-4 hover:underline">
                             &copy; <a :href="doc['copyright'].url">{{ doc['copyright'].name }}</a>
                         </span>
+                    </div>
+                    <div v-if="finish" class="mb-4 dark:prose-invert dark:prose-headings:text-gray-300"
+                         style="margin-top: 50px; line-height:200%;">
+                        <hr class="text-center mx-auto"
+                            style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
+                        <br/>
+                        <div class="text-left">
+                            前端:
+                            <a class="underline-offset-4 hover:underline" href="https://github.com/GaoNeng-wWw"
+                               rel="noopener noreferrer"
+                               target="_blank">GaoNeng-wWw</a> | <a
+                            class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu"
+                            rel="noopener noreferrer"
+                            target="_blank">Snowball_233</a> <br/>
+                            <span>撰稿: 旧棠</span> <br/>
+                            友情链接:
+                            <a class="underline-offset-4 hover:underline" href="https://github.com/xSilver-Yang"
+                               rel="noopener noreferrer"
+                               target="_blank">xSilver-Yang</a> <br />
+                            GitHub:
+                            <a class="underline-offset-4 hover:underline" href="https://github.com/SnowballXueQiu/RescueMe"
+                               rel="noopener noreferrer"
+                               target="_blank">RescueMe</a> <br />
+                        </div>
+
+                        <!-- 当前commit名 -->
+                        <!--                        <span class="mx-2">|</span>-->
+                        <!--                        <span>当前commit名: {{ currentCommitName }}</span>-->
                     </div>
                 </footer>
             </transition-group>
