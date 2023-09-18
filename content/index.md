@@ -4,6 +4,7 @@ copyright:
     url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 authors:
     - [Chat-GPT]
+    - [旧棠]
 title: Rescue Me
 ---
 

@@ -19,5 +19,5 @@ export default defineNuxtConfig({
   experimental: {
     externalVue: true,
     payloadExtraction: true
-  }
+  },
 })
