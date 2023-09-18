@@ -5,7 +5,7 @@
             <transition-group name="slide" @enter="onEnter">
                 <div v-if="finish" class="text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300">
                     <img alt="Rescue Me" class="mx-auto"
-                         src="../public/logo.svg" style="max-width: 90%">
+                         src="/logo.svg" style="max-width: 90%">
                     <br/>
                     <hr class="mx-auto" style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
                 </div>
