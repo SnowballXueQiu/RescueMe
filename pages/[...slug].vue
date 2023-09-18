@@ -15,7 +15,7 @@
                         dark:prose-headings:text-gray-200
                         prose prose-img:border prose-img:border-solid prose-img:border-gray-200
                         dark:prose-img:border-gray-700
-                        prose-img:rounded-md max-w-full mx-auto" data-delay="1"/>
+                        prose-img:rounded-md max-w-full mx-auto" data-delay="2"/>
                 <footer v-if="finish"
                         key="footer"
                         class="w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-300"
