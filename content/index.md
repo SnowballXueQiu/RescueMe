@@ -1,10 +1,10 @@
 ---
 copyright:
-    name: CC BY-NC-SA 4.0
-    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  name: CC BY-NC-SA 4.0
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 authors:
-    - [Chat-GPT]
-    - [旧棠]
+  - [ Chat-GPT ]
+  - [ 旧棠 ]
 title: Rescue Me
 ---
 

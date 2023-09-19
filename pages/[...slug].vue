@@ -30,9 +30,11 @@
                             &copy; <a :href="doc['copyright'].url">{{ doc['copyright'].name }}</a>
                         </span>
                     </div>
-                    <div v-if="finish" class="mb-4 mt-4 leading-loose dark:prose-invert dark:prose-headings:text-gray-300">
-                        <hr class="w-[90%] text-center mx-auto border border-solid border-[#1f2937] rounded-[5px]" />
-                        <div class="text-center flex flex-wrap justify-center items-center py-4 bg-slate-900 mt-4 rounded-md">
+                    <div v-if="finish"
+                         class="mb-4 mt-4 leading-loose dark:prose-invert dark:prose-headings:text-gray-300">
+                        <hr class="w-[90%] text-center mx-auto border border-solid border-[#1f2937] rounded-[5px]"/>
+                        <div
+                            class="text-center flex flex-wrap justify-center items-center py-4 bg-slate-900 mt-4 rounded-md">
                             <div style="text-align: right; margin-right: 10px;">
                                 <svg fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -51,13 +53,13 @@
                                         <path
                                             d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
                                     </svg>
-                                    <span>{{ commit }}</span> &nbsp;&nbsp;
+                                    <span>&nbsp{{ commit }}</span> &nbsp;&nbsp;
                                     <svg fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327 .668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
                                     </svg>
-                                    <span>{{stargazers_count}}</span>
+                                    <span>&nbsp{{ stargazers_count }}</span>
                                 </div>
                             </div>
                         </div>
@@ -89,5 +91,5 @@ const onEnter = (el: Element, done: () => void) => {
 const stargazers_count = ref(0);
 const commit = ref('');
 fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe').then(res => res.json()).then((json) => stargazers_count.value = json.stargazers_count);
-fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe/commits/main').then(res => res.json()).then((json) => commit.value = (json.sha as string).slice(0,8));
+fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe/commits/main').then(res => res.json()).then((json) => commit.value = (json.sha as string).slice(0, 8));
 </script>

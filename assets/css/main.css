@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.slide-enter-active,.slide-leave-active{
+.slide-enter-active, .slide-leave-active {
     transition: all .5s ease-in-out;
 }
 
 .slide-enter-from,
-.slide-leave-to{
+.slide-leave-to {
     opacity: 0;
     transform: translateY(-20px);
 }
 
 .slide-enter-to,
-.slide-leave-from{
+.slide-leave-from {
     opacity: 1;
     transform: translateY(0);
 }
