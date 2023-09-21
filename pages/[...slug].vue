@@ -1,4 +1,5 @@
 <template>
+    <!DOCTYPE html>
     <html lang="zh-CN"></html>
     <div class="py-10 px-7">
         <content-doc v-slot="{doc}">
