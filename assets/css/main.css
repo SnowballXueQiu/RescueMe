@@ -17,3 +17,13 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+html::-webkit-scrollbar{
+    width: 5px;
+    background: theme('colors.stone.800')
+}
+
+html::-webkit-scrollbar-thumb{
+    background: theme('colors.stone.700');
+    border-radius: theme('borderRadius.md');
+}
