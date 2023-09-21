@@ -3,8 +3,10 @@
     <html lang="zh-CN"></html>
     <div class="py-10 px-7">
         <content-doc v-slot="{doc}">
-            <transition-group name="slide" @enter="onEnter" :css="false">
-                <div v-if="finish" class="transition-all duration-1000 text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300" data-delay="0.5">
+            <transition-group :css="false" name="slide" @enter="onEnter">
+                <div v-if="finish"
+                     class="transition-all duration-1000 text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300"
+                     data-delay="0.5">
                     <img alt="Rescue Me" class="mx-auto"
                          src="/logo.svg" style="max-width: 90%">
                     <br/>
@@ -54,7 +56,11 @@
                                         <path
                                             d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
                                     </svg>
-                                    <span>&nbsp{{ commit }}</span> &nbsp;&nbsp;
+                                    &nbsp
+                                    <a v-bind:href="['https://github.com/SnowballXueQiu/RescueMe/commit/'+commit.valueOf()]"
+                                       class="underline-offset-4 hover:underline"
+                                       rel="noopener noreferrer"
+                                       target="_blank">{{ commit }}</a> &nbsp;&nbsp;
                                     <svg fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
