@@ -2,24 +2,24 @@
     <html lang="zh-CN"></html>
     <div class="py-10 px-7">
         <content-doc v-slot="{doc}">
-            <transition-group name="slide" @enter="onEnter">
-                <div v-if="finish" class="text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300">
+            <transition-group name="slide" @enter="onEnter" :css="false">
+                <div v-if="finish" class="transition-all duration-1000 text-center mb-4 dark:prose-invert dark:prose-headings:text-gray-300" data-delay="0.5">
                     <img alt="Rescue Me" class="mx-auto"
                          src="/logo.svg" style="max-width: 90%">
                     <br/>
                     <hr class="mx-auto" style="width: 90%; border: 1px solid #1f2937; border-radius: 5px;">
                 </div>
                 <content-renderer v-if="finish" key="renderer" :value="doc" class="
+                        transition-all duration-1000
                         dark:prose-invert
                         prose-p:text-gray-700 dark:prose-p:text-gray-300
                         dark:prose-headings:text-gray-200
                         prose prose-img:border prose-img:border-solid prose-img:border-gray-200
                         dark:prose-img:border-gray-700
-                        prose-img:rounded-md max-w-full mx-auto" data-delay="2"/>
+                        prose-img:rounded-md max-w-full mx-auto" data-delay="0.8"/>
                 <footer v-if="finish"
                         key="footer"
-                        class="w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-100"
-                        data-delay="2">
+                        class="transition-all w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-100">
                     <a v-for="([author], idx) in doc['authors']"
                        class="underline-offset-4">
                         {{ author }} {{ idx === doc['authors'].length - 1 ? '' : ', ' }}
@@ -76,17 +76,17 @@
 <script lang="ts" setup>
 const finish = ref(false);
 setTimeout(() => finish.value = true, 100)
-let depth = 20;
 const onEnter = (el: Element, done: () => void) => {
-    if (depth >= 0) {
-        const delay = Number((el as HTMLElement).dataset.delay ?? 0) * 1000;
-        setTimeout(() => {
-            done();
-        }, delay);
-        depth -= 1;
-    } else {
+    const delay = Number((el as HTMLElement).dataset.delay ?? 0) * 1000;
+    const element = el as HTMLElement;
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(-20px)';
+    setTimeout(() => {
+        console.log(el, 'done')
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0px)';
         done();
-    }
+    }, delay);
 }
 const stargazers_count = ref(0);
 const commit = ref('');
