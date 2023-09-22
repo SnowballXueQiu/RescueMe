@@ -108,11 +108,13 @@ const footerMetaData = reactive<FooterMetadata>({
     copyright: {name: 'CC BY-NC-SA 4.0', url:'https://creativecommons.org/licenses/by-nc-sa/4.0/'}
 })
 const commit = ref('');
-queryContent('/').find()
+useAsyncData('content', () => queryContent('/').find())
 .then((content)=>{
-    parsedContent.value=content[0];
-    footerMetaData.authors = parsedContent.value.authors;
-    footerMetaData.copyright = parsedContent.value.copyright;
+    if (content.data.value){
+        parsedContent.value=content.data.value[0];
+        footerMetaData.authors = parsedContent.value.authors;
+        footerMetaData.copyright = parsedContent.value.copyright;
+    }
     docFinish.value = true;
 })
 Promise.all(
