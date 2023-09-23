@@ -48,7 +48,20 @@
 const stargazers_count = ref(0);
 const commit = ref('');
 
-fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe').then(res => res.json()).then((json) => stargazers_count.value = json.stargazers_count),
-fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe/commits/main').then(res => res.json()).then((json) => commit.value = (json.sha as string)?.slice?.(0, 8) ?? '')
+async function fetchData() {
+    try {
+        const response1 = await fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe');
+        const json1 = await response1.json();
+        stargazers_count.value = json1.stargazers_count;
+
+        const response2 = await fetch('https://api.github.com/repos/SnowballXueQiu/RescueMe/commits/main');
+        const json2 = await response2.json();
+        commit.value = (json2.sha as string)?.slice?.(0, 8) ?? '';
+    } catch (error) {
+        console.error('An error occurred: ', error);
+    }
+}
+
+fetchData();
 
 </script>
