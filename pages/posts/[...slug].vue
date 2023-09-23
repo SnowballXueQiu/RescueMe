@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p @click="back()" class="cursor-pointer dark:hover:text-gray-100 dark:text-gray-300 ">Back</p>
+        <p class="cursor-pointer dark:hover:text-gray-100 dark:text-gray-300 " @click="back()">Back</p>
         <transition-group :css="false" @enter="onEnter">
             <content-renderer v-if="docFinish" key="renderer" :value="parsedContent" class="
                     transition-all duration-1000
@@ -12,9 +12,9 @@
                     prose-img:rounded-md max-w-full mx-auto" data-delay="1.2"/>
         </transition-group>
         <section
-                v-if="docFinish"
-                key="footer"
-                class="transition-all w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-100">
+            v-if="docFinish"
+            key="footer"
+            class="transition-all w-full mt-4 text-right opacity-50 text-gray-600 font-sans text-sm dark:text-gray-100">
             <a v-for="([author], idx) in parsedContent?.authors"
                class="underline-offset-4">
                 {{ author }} {{ idx === parsedContent?.authors.length - 1 ? '' : ', ' }}
@@ -33,8 +33,8 @@
 </style>
 
 <script lang="ts" setup>
-import { ParsedContent } from '@nuxt/content/dist/runtime/types';
-const finish = ref(false);
+import {ParsedContent} from '@nuxt/content/dist/runtime/types';
+
 const docFinish = ref(false);
 const onEnter = (el: Element, done: () => void) => {
     const delay = Number((el as HTMLElement).dataset.delay ?? 0) * 1000;
@@ -51,10 +51,10 @@ const parsedContent = ref<ParsedContent>();
 const router = useRouter();
 const back = () => router.back();
 useAsyncData('content', () => queryContent('/').find())
-.then((content)=>{
-    if (content.data.value){
-        parsedContent.value=content.data.value[0];
-    }
-    docFinish.value = true;
-})
+    .then((content) => {
+        if (content.data.value) {
+            parsedContent.value = content.data.value[0];
+        }
+        docFinish.value = true;
+    })
 </script>
