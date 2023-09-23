@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       htmlAttrs:{
         lang: 'zh-cn'
       },
-      title: 'Rescume Life',
+      title: 'Rescue Me',
     }
   },
 })
