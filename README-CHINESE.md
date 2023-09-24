@@ -1,10 +1,10 @@
-<div style="text-align: center">
+<div align="center">
     <a href="https://sm.ms/image/SNjRIbzw6iBMJAs" target="_blank">
         <img src="https://s2.loli.net/2023/09/24/SNjRIbzw6iBMJAs.jpg"  alt="Rescue Me" width="80%">
     </a>
 </div>
 
-<div style="text-align: center">
+<div align="center">
     <a href="LICENSE">
         <img src="https://img.shields.io/github/license/SnowballXueQiu/RescueMe?style=for-the-badge&&logo=github" alt="MIT" style="text-decoration: none;">
     </a>
