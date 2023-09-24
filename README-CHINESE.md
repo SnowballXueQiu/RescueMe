@@ -24,20 +24,20 @@
 </div>
 
 <p align="center">
-    English | 
-    <a href="README-CHINESE.md">简体中文</a>
+    <a href="/profile/README.md">English</a> | 
+    简体中文
 </p>
 
-## Creation Background
+## 创作背景
 
-&emsp;&emsp;The journey of self redemption began with the AI dialogue website called "Rescue Me" created by my friend. This name deeply touched my heart, it is a precious gift, not only bringing me wisdom, but also like a guiding light to move forward. The profound meaning conveyed by this website has stimulated my desire for inner exploration and self-improvement, becoming a refuge for my soul.
+&emsp;&emsp;自我救赎之旅始于那个由我朋友制作的名为 "Rescue-Me" 的 AI 对话网站. 这个名称深深地触动了我的内心, 它是一份珍贵的礼物, 不仅为我带来了智慧, 更仿佛是一盏指引前行的明灯. 这个网站所传达的深意激发了我对内心探索和自我提升的渴望, 成为了我心灵的庇护所.
 
-&emsp;&emsp;"RescueMe" literally translates as "self redemption". For me, it means finding my direction in the fog of life, breaking free from constraints, and bravely facing inner challenges.
+&emsp;&emsp;"RescueMe" 从字面上译为 "自我救赎", 对我而言, 它意味着在生活的迷雾中找到自己的方向, 摆脱束缚, 勇敢地面对内心的挑战.
 
-&emsp;&emsp;So, I hope to pass on this power, so that more people can also be encouraged to defeat their own "**HEART DEMONS**".
+&emsp;&emsp;所以, 我希望将这一份力量传递出去, 使得更多的人也能受到鼓励, 击败自己的 "**心魔**".
 
-## Contributor
+## 贡献者
 
-- [SnowballXueQiu](https://github.com/SnowballXueQiu) - Frontend
-- [GaoNeng-wWw](https://github.com/GaoNeng-wWw) - Frontend
-- 旧棠 - Compose
+- [SnowballXueQiu](https://github.com/SnowballXueQiu) - 前端
+- [GaoNeng-wWw](https://github.com/GaoNeng-wWw) - 前端
+- 旧棠 - 撰稿
