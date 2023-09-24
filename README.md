@@ -1,8 +1,10 @@
-<div align="center">
+<div align="center" style="margin-top: 25px;">
     <a href="https://sm.ms/image/SNjRIbzw6iBMJAs" target="_blank">
         <img src="https://s2.loli.net/2023/09/24/SNjRIbzw6iBMJAs.jpg"  alt="Rescue Me" width="80%">
     </a>
 </div>
+
+<br />
 
 <div align="center">
     <a href="LICENSE">
@@ -27,6 +29,8 @@
     English | 
     <a href="README-CHINESE.md">简体中文</a>
 </p>
+
+---
 
 ## Creation Background
 
