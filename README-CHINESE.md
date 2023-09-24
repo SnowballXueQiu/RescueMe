@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-    <a href="/profile/README">English</a> | 
+    <a href="https://github.com/SnowballXueQiu/RescueMe/tree/main#readme">English</a> | 
     简体中文
 </p>
 
