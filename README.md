@@ -16,7 +16,6 @@
     <a href="https://github.com/SnowballXueQiu/RescueMe/deployments/Preview">
         <img src="https://img.shields.io/github/deployments/SnowballXueQiu/RescueMe/Preview?style=for-the-badge&logo=vercel&label=Preview" alt="GitHub deployments" style="text-decoration: none;">
     </a>
-    <img src="https://img.shields.io/github/search/SnowballXueQiu/RescueMe/all?style=for-the-badge&logo=searxng&label=VIEWS" alt="GitHub search hit counter" style="text-decoration: none;">
     <img src="https://img.shields.io/github/stars/SnowballXueQiu/RescueMe?style=for-the-badge" alt="GitHub Repo stars" style="text-decoration: none;">
     <br />
     <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="NODE JS" style="text-decoration: none;">
