@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="cursor-pointer dark:hover:text-gray-100 dark:text-gray-300 " @click="back()">Back</p>
+        <p class="cursor-pointer dark:hover:text-gray-100 dark:text-gray-300 " @click="back()">&lt; Back</p>
         <transition-group :css="false" @enter="onEnter">
             <content-renderer v-if="docFinish" key="renderer" :value="parsedContent" class="
                     transition-all duration-1000
