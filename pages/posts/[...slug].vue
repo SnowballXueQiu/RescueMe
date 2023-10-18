@@ -49,8 +49,10 @@ const onEnter = (el: Element, done: () => void) => {
 }
 const parsedContent = ref<ParsedContent>();
 const router = useRouter();
+const route = useRoute();
 const back = () => router.back();
-useAsyncData('content', () => queryContent('/').find())
+const post_id = route.params.slug[0];
+useAsyncData('content', () => queryContent(post_id).find())
     .then((content) => {
         if (content.data.value) {
             parsedContent.value = content.data.value[0];

@@ -4,7 +4,7 @@
         <content-navigation v-slot="{navigation}">
             <ul class="mx-auto">
                 <template v-for="nav in navigation">
-                    <nuxt-link :to="`/posts/${nav.title}`">
+                    <nuxt-link :to="`/posts/${nav._path.replace('/','')}`">
                         <li
                             v-if="!nav._draft"
                             class="cursor-pointer transition-all duration-500 my-5
