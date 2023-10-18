@@ -35,7 +35,8 @@ export default defineNuxtConfig({
   app:{
     head:{
       htmlAttrs:{
-        lang: 'zh-cn'
+        lang: 'zh-cn',
+        class: 'dark'
       },
       title: 'Rescue Me',
     }
