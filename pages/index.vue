@@ -3,8 +3,8 @@
         <logo/>
         <content-navigation v-slot="{navigation}">
             <ul class="mx-auto">
-                <template v-for="nav in navigation">
-                    <nuxt-link :to="`/posts/${nav._path.replace('/','')}`">
+                <template v-for="nav in navigation[2].children">
+                    <nuxt-link :to="nav._path">
                         <li
                             v-if="!nav._draft"
                             class="cursor-pointer transition-all duration-500 my-5
@@ -20,3 +20,9 @@
         </content-navigation>
     </div>
 </template>
+
+<script lang="ts" setup>
+useHead({
+    title: 'Rescue Me'
+})
+</script>
