@@ -1,16 +1,22 @@
 import usePreRenderRoute from "./scripts/usePreRenderRoute";
+import {resolve} from 'path';
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss'
   ],
-  // css: ['@/assets/css/main.css'],
   nitro: {
     preset: 'static',
-    prerender:{
-      routes: [...usePreRenderRoute()],
+  },
+  content:{
+    sources: {
+      content:{
+        driver:'fs',
+        prefix:'/posts',
+        base: resolve(__dirname, 'content')
+      }
     },
   },
   experimental: {
@@ -41,4 +47,5 @@ export default defineNuxtConfig({
       title: 'Rescue Me',
     }
   },
+  ssr: true
 })
