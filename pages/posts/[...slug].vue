@@ -51,11 +51,11 @@ const parsedContent = ref<ParsedContent>();
 const router = useRouter();
 const route = useRoute();
 const back = () => router.replace('/');
-const post_id = route.params.slug[0];
-useAsyncData('content', () => queryContent(post_id).find())
+const queryDocument = () => queryContent('/').where({'_file': `${route.params.slug[0]}.md`}).findOne();
+useAsyncData('content', queryDocument)
     .then((content) => {
         if (content.data.value) {
-            parsedContent.value = content.data.value[0];
+            parsedContent.value = content.data.value;
         }
         docFinish.value = true;
     })
