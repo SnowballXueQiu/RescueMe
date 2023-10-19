@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static',
   },
+  css: ['~/assets/css/main.css'],
   content:{
     sources: {
       content:{
