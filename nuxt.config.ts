@@ -11,15 +11,6 @@ export default defineNuxtConfig({
     preset: 'static',
   },
   css: ['~/assets/css/main.css'],
-  content:{
-    sources: {
-      content:{
-        driver:'fs',
-        prefix:'/posts',
-        base: resolve(__dirname, 'content')
-      }
-    },
-  },
   experimental: {
     externalVue: true,
     payloadExtraction: true,
@@ -34,7 +25,7 @@ export default defineNuxtConfig({
         compress: {
           drop_console: true,
           drop_debugger: true,
-          dead_code: false,
+          dead_code: true,
         },
       },
     },

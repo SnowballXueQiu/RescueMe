@@ -2,17 +2,16 @@
     <div>
         <p class="cursor-pointer dark:hover:text-gray-100 dark:text-gray-300 " @click="back()">&lt; Back</p>
         <transition-group :css="false" @enter="onEnter">
-            <content-doc
-                v-slot="{ doc }"
-            >
-                <content-renderer :value="doc" class="transition-all duration-1000
-                    dark:prose-invert
-                    prose-p:text-gray-700 dark:prose-p:text-gray-300
-                    dark:prose-headings:text-gray-200
-                    prose prose-img:border prose-img:border-solid prose-img:border-gray-200
-                    dark:prose-img:border-gray-700
-                    prose-img:rounded-md max-w-full mx-auto" />
-            </content-doc>
+            <template v-if="doc !== null">
+                <content-renderer :value="doc"
+                    class="transition-all duration-1000
+                        dark:prose-invert
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300
+                        dark:prose-headings:text-gray-200
+                        prose prose-img:border prose-img:border-solid prose-img:border-gray-200
+                        dark:prose-img:border-gray-700
+                        prose-img:rounded-md max-w-full mx-auto" />
+            </template>
         </transition-group>
         <section
             v-if="docFinish"
@@ -52,5 +51,16 @@ const onEnter = (el: Element, done: () => void) => {
 }
 const parsedContent = ref<ParsedContent>();
 const router = useRouter();
+const route = useRoute();
+const doc:Ref<ParsedContent | null> = ref(null);
 const back = () => router.replace('/');
+if (!route.params.slug[0]){
+    back();
+}
+
+useAsyncData(router.currentRoute.value.path,()=>{
+    const route = useRoute();
+    return queryContent(route.path.replace('/posts/','')).findOne()
+})
+.then(({data}) => doc.value = data.value)
 </script>
